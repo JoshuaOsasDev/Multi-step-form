@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+@import "tailwindcss";
+
+*:disabled {
+  @apply cursor-not-allowed;
+}
+
+@theme {
+  /* 🎨 Primary Colors */
+  --color-primary-blue-950: hsl(213, 96%, 18%);
+  --color-primary-purple-600: hsl(243, 100%, 62%);
+  --color-primary-blue-300: hsl(228, 100%, 84%);
+  --color-primary-blue-200: hsl(206, 94%, 87%);
+  --color-primary-red-500: hsl(354, 84%, 57%);
+
+  /* 🩶 Neutral Colors */
+  --color-neutral-grey-500: hsl(231, 11%, 63%);
+  --color-neutral-purple-200: hsl(229, 24%, 87%);
+  --color-neutral-blue-100: hsl(218, 100%, 97%);
+  --color-neutral-blue-50: hsl(231, 100%, 99%);
+  --color-white: hsl(0, 100%, 100%);
+
+  /* ✍️ Typography */
+  --font-ubuntu: "Ubuntu", sans-serif;
+}
+
+@layer components {
+  .form-row {
+    @apply grid grid-cols-[20rem] items-center gap-1.5 py-[10px] md:grid-cols-1;
+    /* display: grid;
+    align-items: center;
+    grid-template-columns: 20rem; */
+    /* grid-template-columns: 5rem 15rem 7rem; */
+    /* gap: 5px;
+    padding: 10px 0; */
+    /* border-bottom: 1px solid #f3f4f6; */
+  }
+
+  .form-row input {
+    @apply border-neutral-grey-500 placeholder:text-neutral-grey-500 text-primary-blue-950 mr-3 rounded-sm border-1 p-2 text-lg shadow-sm placeholder:text-xl placeholder:italic focus:ring-2 focus:outline-0 md:w-[22rem] md:rounded-lg md:text-xl lg:w-[30rem];
+  }
+
+  .form-row label {
+    @apply text-primary-blue-950 text-base md:text-xl;
+  }
+}
